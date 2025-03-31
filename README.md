@@ -1,50 +1,90 @@
-# Welcome to your Expo app 👋
+# Aplicativo de Gestão de Estoque para FF Mercadinho
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este projeto faz parte de um trabalho de extensão desenvolvido para o FF Mercadinho, um estabelecimento comercial localizado em Mesquita, RJ.
+O aplicativo mobile desenvolvido tem como objetivo facilitar o controle de estoque, reduzir perdas por vencimento de produtos e melhorar a tomada de decisões relacionadas a compras e reposições.
 
-## Get started
+## Objetivos
 
-1. Install dependencies
+- Desenvolver um aplicativo móvel intuitivo para controle de estoque.
+- Implementar funcionalidades para registro de entradas e saídas de produtos.
+- Criar sistema de alertas para produtos com estoque baixo ou próximos ao vencimento.
+- Capacitar a equipe do mercadinho para utilizar o aplicativo em suas rotinas diárias.
+- Reduzir perdas por vencimento e faltas de estoque.
 
-   ```bash
-   npm install
-   ```
+## Estrutura do Projeto
 
-2. Start the app
+O projeto está estruturado seguindo a arquitetura do Expo Router:
 
-   ```bash
-    npx expo start
-   ```
+1. **app/**: Contém as telas e rotas do aplicativo
+   - **produtos/**: Páginas relacionadas ao gerenciamento de produtos
+   - **alertas/**: Sistema de alertas para produtos com estoque baixo ou próximos ao vencimento
+2. **components/**: Componentes reutilizáveis como itens de lista
+3. **hooks/**: Hooks customizados para gerenciamento de dados
+   - **useStorage.ts**: Gerenciamento do armazenamento local (AsyncStorage)
 
-In the output, you'll find options to open the app in a
+## Requisitos
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Node.js 14+
+- React Native / Expo
+- TypeScript
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Instalação das Dependências
 
-## Get a fresh project
-
-When you're ready, run:
+Para instalar as dependências, execute:
 
 ```bash
-npm run reset-project
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Funcionalidades
 
-## Learn more
+### 1. Gerenciamento de Produtos:
 
-To learn more about developing your project with Expo, look at the following resources:
+- Cadastro de novos produtos com informações detalhadas
+- Visualização de lista de produtos com indicadores de estoque
+- Detalhes do produto com histórico de movimentações
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Controle de Estoque:
 
-## Join the community
+- Registro de entradas (compras, devoluções, etc.)
+- Registro de saídas (vendas, perdas, etc.)
+- Acompanhamento do histórico de movimentações por produto
 
-Join our community of developers creating universal apps.
+### 3. Sistema de Alertas:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Produtos com estoque abaixo do mínimo
+- Produtos próximos à data de vencimento
+- Interface visual destacando produtos críticos
+
+## Uso
+
+1. **Iniciar o aplicativo:**
+
+   ```bash
+   npx expo start
+   ```
+
+2. **Cadastro de Produtos:**
+   Na tela de produtos, toque no botão "+" para adicionar um novo produto com informações como nome, categoria, preço, estoque atual e mínimo.
+
+3. **Registrar Movimentações:**
+   Na tela de detalhes do produto, utilize os botões "Entrada" ou "Saída" para registrar movimentações de estoque.
+
+4. **Consultar Alertas:**
+   Acesse a tela de alertas para visualizar produtos que precisam de atenção, como itens com estoque baixo ou próximos ao vencimento.
+
+## Resultados Esperados
+
+- Redução de pelo menos 20% nas perdas por vencimento de produtos.
+- Diminuição da ocorrência de rupturas de estoque em itens essenciais.
+- Otimização do tempo gasto com inventário e controle manual.
+- Melhoria na capacidade de planejamento de compras da empresa.
+- Feedback positivo dos colaboradores quanto à facilidade de uso e utilidade do aplicativo.
+
+## Contribuição
+
+Este projeto foi desenvolvido por Anderson Luiz Diniz de Oliveira como parte de um projeto de extensão para a disciplina de Programação Para Dispositivos Móveis em Android. Feedback e sugestões são bem-vindos.
+
+## Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
